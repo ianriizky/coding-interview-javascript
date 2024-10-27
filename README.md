@@ -49,6 +49,7 @@ pnpm test
 - [x] [Fibonacci](src/Fibonacci/README.md)
 - [x] [Fizz Buzz](src/FizzBuzz/README.md)
 - [x] [Palindrome](src/Palindrome/README.md)
+- [x] [Calculating with Functions](src/Calculate/README.md)
 
 You can help us to add more training case on the list above by contributing to this repository. See [`CONTRIBUTING.MD`](CONTRIBUTING.md) for more information.
 
