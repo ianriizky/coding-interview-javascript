@@ -23,8 +23,8 @@ const fizzBuzzes = [
   "fizz buzz",
 ];
 
-describe("fizz buzz", (): void => {
-  it("can generate", (): void => {
+describe("fizz buzz", () => {
+  it("can generate", () => {
     for (let sequence = 1; sequence <= 20; sequence++) {
       expect(new FizzBuzz(sequence).generate()).toStrictEqual<string[]>(
         fizzBuzzes.slice(0, sequence),

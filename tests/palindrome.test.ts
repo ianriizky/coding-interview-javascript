@@ -60,26 +60,26 @@ const unpalindromeSentences = [
 
 const methods = ["reverse", "loop", "recursive"] satisfies Method[];
 
-describe("palindrome", (): void => {
-  it("can validate a palindrome word using reverse method", (): void => {
+describe("palindrome", () => {
+  it("can validate a palindrome word using reverse method", () => {
     palindromeWords.forEach((word) => {
       expect(new Palindrome(word).evaluateUsingReverse()).toBe(true);
     });
   });
 
-  it("can validate a palindrome word using loop method", (): void => {
+  it("can validate a palindrome word using loop method", () => {
     palindromeWords.forEach((word) => {
       expect(new Palindrome(word).evaluateUsingLoop()).toBe(true);
     });
   });
 
-  it("can validate a palindrome word using recursive method", (): void => {
+  it("can validate a palindrome word using recursive method", () => {
     palindromeWords.forEach((word) => {
       expect(new Palindrome(word).evaluateUsingRecursive()).toBe(true);
     });
   });
 
-  it("can validate a palindrome word using random method", (): void => {
+  it("can validate a palindrome word using random method", () => {
     palindromeWords.forEach((word) => {
       expect(
         new Palindrome(word).evaluate(
@@ -89,25 +89,25 @@ describe("palindrome", (): void => {
     });
   });
 
-  it("can validate a palindrome sentence using reverse method", (): void => {
+  it("can validate a palindrome sentence using reverse method", () => {
     palindromeSentences.forEach((sentence) => {
       expect(new Palindrome(sentence).evaluateUsingReverse()).toBe(true);
     });
   });
 
-  it("can validate a palindrome sentence using loop method", (): void => {
+  it("can validate a palindrome sentence using loop method", () => {
     palindromeSentences.forEach((sentence) => {
       expect(new Palindrome(sentence).evaluateUsingLoop()).toBe(true);
     });
   });
 
-  it("can validate a palindrome sentence using recursive method", (): void => {
+  it("can validate a palindrome sentence using recursive method", () => {
     palindromeSentences.forEach((sentence) => {
       expect(new Palindrome(sentence).evaluateUsingRecursive()).toBe(true);
     });
   });
 
-  it("can validate a palindrome sentence using random method", (): void => {
+  it("can validate a palindrome sentence using random method", () => {
     palindromeSentences.forEach((sentence) => {
       expect(
         new Palindrome(sentence).evaluate(
@@ -117,25 +117,25 @@ describe("palindrome", (): void => {
     });
   });
 
-  it("can invalidate an unpalindrome word using reverse", (): void => {
+  it("can invalidate an unpalindrome word using reverse", () => {
     unpalindromeWords.forEach((word) => {
       expect(new Palindrome(word).evaluateUsingReverse()).toBe(false);
     });
   });
 
-  it("can invalidate an unpalindrome word using loop", (): void => {
+  it("can invalidate an unpalindrome word using loop", () => {
     unpalindromeWords.forEach((word) => {
       expect(new Palindrome(word).evaluateUsingLoop()).toBe(false);
     });
   });
 
-  it("can invalidate an unpalindrome word using recursive", (): void => {
+  it("can invalidate an unpalindrome word using recursive", () => {
     unpalindromeWords.forEach((word) => {
       expect(new Palindrome(word).evaluateUsingRecursive()).toBe(false);
     });
   });
 
-  it("can invalidate a unpalindrome word using random method", (): void => {
+  it("can invalidate a unpalindrome word using random method", () => {
     unpalindromeWords.forEach((word) => {
       expect(
         new Palindrome(word).evaluate(
@@ -145,25 +145,25 @@ describe("palindrome", (): void => {
     });
   });
 
-  it("can invalidate an unpalindrome sentence using reverse", (): void => {
+  it("can invalidate an unpalindrome sentence using reverse", () => {
     unpalindromeSentences.forEach((sentence) => {
       expect(new Palindrome(sentence).evaluateUsingReverse()).toBe(false);
     });
   });
 
-  it("can invalidate an unpalindrome sentence using loop", (): void => {
+  it("can invalidate an unpalindrome sentence using loop", () => {
     unpalindromeSentences.forEach((sentence) => {
       expect(new Palindrome(sentence).evaluateUsingLoop()).toBe(false);
     });
   });
 
-  it("can invalidate an unpalindrome sentence using recursive", (): void => {
+  it("can invalidate an unpalindrome sentence using recursive", () => {
     unpalindromeSentences.forEach((sentence) => {
       expect(new Palindrome(sentence).evaluateUsingRecursive()).toBe(false);
     });
   });
 
-  it("can invalidate a unpalindrome sentence using random method", (): void => {
+  it("can invalidate a unpalindrome sentence using random method", () => {
     unpalindromeSentences.forEach((sentence) => {
       expect(
         new Palindrome(sentence).evaluate(
@@ -173,7 +173,7 @@ describe("palindrome", (): void => {
     });
   });
 
-  it("throw an error if using unknown method", (): void => {
+  it("throw an error if using unknown method", () => {
     // @ts-expect-error
     expect(() => new Palindrome("abcde").evaluate("abcde")).toThrow(TypeError);
   });

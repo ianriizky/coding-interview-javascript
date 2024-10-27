@@ -22,26 +22,26 @@ const factorials = new Map([
 ]);
 const methods = ["loop", "recursive"] satisfies Method[];
 
-describe("factorial", (): void => {
-  it("can count using loop method", (): void => {
+describe("factorial", () => {
+  it("can count using loop method", () => {
     factorials.forEach((result, number) => {
       expect(new Factorial(number).countUsingLoop()).toBe(result);
     });
   });
 
-  it("can count using recursive method", (): void => {
+  it("can count using recursive method", () => {
     factorials.forEach((result, number) => {
       expect(new Factorial(number).countUsingRecursive()).toBe(result);
     });
   });
 
-  it("can count using tail recursive method", (): void => {
+  it("can count using tail recursive method", () => {
     factorials.forEach((result, number) => {
       expect(new Factorial(number).countUsingTailRecursive()).toBe(result);
     });
   });
 
-  it("can count using random method", (): void => {
+  it("can count using random method", () => {
     factorials.forEach((result, number) => {
       expect(
         new Factorial(number).count(
@@ -51,7 +51,7 @@ describe("factorial", (): void => {
     });
   });
 
-  it("throw an error if using unknown method", (): void => {
+  it("throw an error if using unknown method", () => {
     // @ts-expect-error
     expect(() => new Factorial(1).count("abcde")).toThrow(TypeError);
   });

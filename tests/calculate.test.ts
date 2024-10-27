@@ -1,28 +1,28 @@
 import * as c from "../src/Calculate";
 
-describe("static example calculations", (): void => {
-  it("return 35 when seven(times(five()))", (): void => {
+describe("static example calculations", () => {
+  it("return 35 when seven(times(five()))", () => {
     expect(c.seven(c.times(c.five()))).toBe(35);
   });
 
-  it("return 13 when four(plus(nine()))", (): void => {
+  it("return 13 when four(plus(nine()))", () => {
     expect(c.four(c.plus(c.nine()))).toBe(13);
   });
 
-  it("return 5 when eight(minus(three()))", (): void => {
+  it("return 5 when eight(minus(three()))", () => {
     expect(c.eight(c.minus(c.three()))).toBe(5);
   });
 
-  it("return 3 when six(dividedBy(two()))", (): void => {
+  it("return 3 when six(dividedBy(two()))", () => {
     expect(c.six(c.dividedBy(c.two()))).toBe(3);
   });
 
-  it("return 2 when eight(dividedBy(three()))", (): void => {
+  it("return 2 when eight(dividedBy(three()))", () => {
     expect(c.eight(c.dividedBy(c.three()))).toBe(2);
   });
 });
 
-describe("random calculations", (): void => {
+describe("random calculations", () => {
   const NUMBERS = [
     c.zero,
     c.one,
@@ -49,7 +49,7 @@ describe("random calculations", (): void => {
     const actual = aFunc(op(bFunc()));
     const expected = solutionFunc(a, b);
 
-    it(`return ${expected} when ${aFunc.name}(${op.name}(${bFunc.name}()))`, (): void => {
+    it(`return ${expected} when ${aFunc.name}(${op.name}(${bFunc.name}()))`, () => {
       expect(actual).toBe(expected);
     });
   };

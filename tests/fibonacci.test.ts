@@ -6,8 +6,8 @@ const fibonaccis = [
 ];
 const methods = ["loop", "recursive"] satisfies Method[];
 
-describe("fibonacci", (): void => {
-  it("can generate using loop method", (): void => {
+describe("fibonacci", () => {
+  it("can generate using loop method", () => {
     for (let sequence = 1; sequence <= 20; sequence++) {
       expect(new Fibonacci(sequence).generateUsingLoop()).toStrictEqual<
         number[]
@@ -15,7 +15,7 @@ describe("fibonacci", (): void => {
     }
   });
 
-  it("can generate using recursive method", (): void => {
+  it("can generate using recursive method", () => {
     for (let sequence = 1; sequence <= 20; sequence++) {
       expect(new Fibonacci(sequence).generateUsingRecursive()).toStrictEqual<
         number[]
@@ -23,7 +23,7 @@ describe("fibonacci", (): void => {
     }
   });
 
-  it("can generate using random method", (): void => {
+  it("can generate using random method", () => {
     for (let sequence = 1; sequence <= 20; sequence++) {
       expect(
         new Fibonacci(sequence).generate(
@@ -33,7 +33,7 @@ describe("fibonacci", (): void => {
     }
   });
 
-  it("throw an error if using unknown method", (): void => {
+  it("throw an error if using unknown method", () => {
     // @ts-expect-error
     expect(() => new Fibonacci(1).generate("abcde")).toThrow(TypeError);
   });
